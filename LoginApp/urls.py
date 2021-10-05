@@ -4,4 +4,3 @@ from . import views
 urlpatterns = [
     path('login/', views.loginpage)
 ]
-
