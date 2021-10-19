@@ -2,7 +2,11 @@
 4thRepo
 
 Acá vamos a subir el avance del proyecto.
-Cada uno debe sacar un branch aparte con su nombre o con lo que quiera.  
+Cada uno debe sacar un branch aparte con su nombre o con lo que quiera. 
+
+## Instalación
+ - Para ejecutar el proyecto es necesario tener python 3.8 en adelante.
+ - Se instala finalmente Django mediante `pip install Django`
 
 ## Requerimientos
  - 🍌 Python 3.8.*
