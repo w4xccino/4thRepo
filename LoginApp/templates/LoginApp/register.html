@@ -15,17 +15,18 @@
     <form method="POST" class="form" >
         {% csrf_token %}
         {{ form.as_p }}
-    <button type="submit">Register</button>
+    <button class="waves-effect waves-light btn-small" type="submit">Register</button>
     </form>
     </div>
     {%if messages%}
-    {% for message in messages %}
-        <div class="notification {{message.tags}}">
-            {{message}}
-        </div>
-    {% endfor %}
+        {% for message in messages %}
+            <div class="notification {{message.tags}}">
+                {{message}}
+            </div>
+        {% endfor %}
+    {%endif%}
+    <script src="{% static 'LoginApp/js/materialize.js' %}"></script>
 
-{%endif%}
 
 </body>  
 </html>
