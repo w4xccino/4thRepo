@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+    {%load static%}
+    <link rel="shortcut icon" type="image/x-icon" href="{%static 'WebPayments/img/image.png'%}">
+    <link rel="stylesheet" href="{%static 'WebPayments/css/materialize.css'%}">
 <body>
-    <nav>
-        gaaaa
-    </nav>
-    
+<nav class="nav-wrapper indigo">
+    <div class="container">
+        <a href="" class="brand-logo">Title</a>
+        <ul class="right">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Proveedores</a></li>
+            <li><a href="#">Suscripciones</a></li>
+        </ul>
+    </div>
+</nav>
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m8 l6">
+                <h5 class="cian-text">Creadores</h5>
+                <p class="black-text">The Four Minds</p>
+            </div>
+            <div class="col s12 m4 l6">
+                <h5 class="cian-text">Thanks for watching</h5>
+                <p class="black-text"></p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="brand-text left">
+            © 2021 Copyright Texto
+            {% load static %}</div>
+            <div class="brand-image right"> <a href="https://github.com/w4xccino/4thRepo" target="_blank"><img class="fullwidth" src="{%static 'WebPayments/img/Github.png'%}"></a>
+        
+        </img></div></div>
+        </div>
+    </div>
+</footer>
+<script src="{%static 'WebPayments/js/materialize.js'%}"></script> 
 </body>
 </html>
