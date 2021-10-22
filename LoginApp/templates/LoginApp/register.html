@@ -11,13 +11,15 @@
 </head>
 <body>
 <h1 class="center">Registerr</h1>
-<div class="container">
-    <form method="POST" class="form" >
-        {% csrf_token %}
-        {{ form.as_p }}
-    <button class="waves-effect waves-light btn-small" type="submit">Register</button>
-    </form>
+<div class="container row">
+    <div class="col s5">
+        <form method="POST" class="" >
+            {% csrf_token %}
+            {{ form.as_p }}
+        <button class="waves-effect waves-light btn-small" type="submit">Register</button>
+        </form>
     </div>
+</div>
     {%if messages%}
         {% for message in messages %}
             <div class="notification {{message.tags}}">
