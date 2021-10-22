@@ -1,0 +1,54 @@
+{%extends 'WebPayments/base.html'%}
+{%block contenido%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static %}
+    <link rel="stylesheet" href="{%static 'WebPayments/css/materialize.css'%}">
+    <title>Document</title>
+</head>
+<body>
+<div class="black white-text center">
+    <div class="container">
+        <div class="section">
+            <h4>
+                BIENVENIDO USUARIO BILLY
+            </h4>
+        </div>
+    </div>
+</div>
+<div class="parallax-container">
+    {%load static %}
+    <div class="parallax"><img src="{%static 'WebPayments/img/PeepoPay.jpg'%}"></div>
+</div>
+<div class="black white-text center">
+    <div class="container">
+        <div class="section">
+            <h4>
+                HOLA MUNDO
+            </h4>
+            <p>
+                Buenas buenas...
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+<div class="parallax-container">
+    {%load static %}
+    <div class="parallax"><img src="{%static 'WebPayments/img/fondo2.jpg'%}"></div>
+</div>
+{%load static %}
+<script src="{%static 'WebPayments/js/materialize.js'%}"></script> 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.parallax');
+        var instances = M.Parallax.init(elems);
+      });
+</script>
+</body>
+</html>
+{%endblock%}
