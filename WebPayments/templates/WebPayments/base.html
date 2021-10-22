@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {%load static%}
     <link rel="shortcut icon" type="image/x-icon" href="{%static 'WebPayments/img/image.png'%}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{%static 'WebPayments/css/materialize.css'%}">
 
 <body>
+<<<<<<< HEAD
 <nav class="nav-wrapper indigo">
     <div class="container">
         <a href="" class="brand-logo">PeepoPay</a>
@@ -17,10 +19,34 @@
             <li><a href="#">Proveedores</a></li>
             <li><a href="#">Suscripciones</a></li>
             <li><a href="{%url 'logout' %}">Cerrar Sesion</a></li>
+=======
+
+<nav class="nav-wrapper teal darken-4">
+<div class="container">
+    <div class="left-nav">
+        <a href="" class="brand-logo">PeepoPay</a>
+    </div>
+    <div class="right">
+        <ul>
+            <li><a class="btn-floating btn-large waves-effect waves-black teal darken-4">
+            <i class="material-icons left">home</i>home</a></li>
+            <li><a class="btn-floating btn-large waves-effect waves-black teal darken-4">
+            <i class="material-icons left">supervised_user_circle</i>Proveedores</a></li>
+            <li><a class="btn-floating btn-large waves-effect waves-black teal darken-4">
+            <i class="material-icons left">subscriptions</i>Subscripciones</a></li>
+            <li><a class="btn-floating btn-large waves-effect waves-black teal darken-4" href="{%url 'logout' %}">
+            <i class="material-icons right">logout</i>Cerrar Sesion</a></li>
+            <li><a class="btn-floating btn-large waves-effect waves-light teal darken-4"><i class="material-icons right">account_circle</i></a></li>
+>>>>>>> main
         </ul>
     </div>
+</div>
 </nav>
+<div class="contenido">
+{%block contenido%}
 
+{%endblock%}
+</div>
 <footer class="page-footer">
     <div class="container">
         <div class="row">
@@ -29,7 +55,7 @@
                 <p class="black-text">The Four Minds</p>
             </div>
             <div class="col s12 m4 l6">
-                <h5 class="cian-text">Thanks for watching</h5>
+                <h5 class="cian-text">Thanks for visiting our website.</h5>
                 <p class="black-text"></p>
             </div>
         </div>
@@ -37,9 +63,10 @@
     <div class="footer-copyright">
         <div class="container">
             <div class="brand-text left">
-            © 2021 Copyright Texto
+            © 2021 Copyright Text
             {% load static %}</div>
-            <div class="brand-image right"> <a href="https://github.com/w4xccino/4thRepo" target="_blank"><img class="fullwidth" src="{%static 'WebPayments/img/github.png'%}"></a>
+            <div class="brand-image right"> <a href="https://github.com/w4xccino/4thRepo" target="_blank">
+            <img class="fullwidth" src="{%static 'WebPayments/img/github.png'%}"></a>
         
         </img></div></div>
         </div>
