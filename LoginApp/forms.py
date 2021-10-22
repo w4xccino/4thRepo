@@ -4,8 +4,8 @@ from django.contrib.auth.models import User
 from .models import Usuario
 
 class Registro(UserCreationForm):
-    username = forms.CharField(label='Nombre de usuario', class = 'col s6')
-    email = forms.EmailField(label='E-mail', class = 'col s6')
+    username = forms.CharField(label='Nombre de usuario')
+    email = forms.EmailField(label='E-mail')
     first_name = forms.CharField(label='Nombres')
     last_name = forms.CharField(label='Apellidos')
     direccion = forms.CharField(label='Direccion')
