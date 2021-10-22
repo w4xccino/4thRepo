@@ -6,18 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     {% load static %}
+    <link rel="shortcut icon" type="image/x-icon" href="{%static 'WebPayments/img/image.png'%}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'LoginApp/css/materialize.css' %}">
 </head>
 <body>
     <div class="container">
-        <h2>Iniciar Sesion</h2>
-        <form method="POST" class="form">
-            {%csrf_token%}
-            {{form.as_p}}
-            <button class="waves-effect waves-light btn-small" type="submit">Login</button>
-        </form>
+        <div class="row">
+            <div class="center-align">
+                <div class="col s12 m4 offset-m4">
+                    <h3>Iniciar Sesión</h3>
+                    <div class="">
+                        <form method="POST">
+                                    {%csrf_token%}
+                                <label for="textarea1">{{form.as_p}}</label>
+                                <button class="waves-effect waves-light btn-small" type="submit">
+                                <i class="material-icons right">login</i>Ingresar</button>
+                                <a  class="waves-effect waves-light btn-small"  href="{%url 'register'%}">
+                                <i class="material-icons right">app_registration</i>Registrarse</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="{% static 'LoginApp/js/materialize.js' %}"></script>
 
+<script src="{% static 'LoginApp/js/materialize.js' %}"></script>
 </body>
 </html>

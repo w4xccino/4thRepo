@@ -23,9 +23,10 @@
             <i class="material-icons left">supervised_user_circle</i>Proveedores</a></li>
             <li><a class="btn-floating btn-large waves-effect waves-black teal darken-4">
             <i class="material-icons left">subscriptions</i>Subscripciones</a></li>
+            <li><a class="btn-floating btn-large waves-effect waves-light teal darken-4">
+            <i class="material-icons right">account_circle</i></a></li>
             <li><a class="btn-floating btn-large waves-effect waves-black teal darken-4" href="{%url 'logout' %}">
             <i class="material-icons right">logout</i>Cerrar Sesion</a></li>
-            <li><a class="btn-floating btn-large waves-effect waves-light teal darken-4"><i class="material-icons right">account_circle</i></a></li>
         </ul>
     </div>
 </div>
@@ -51,15 +52,16 @@
     <div class="footer-copyright">
         <div class="container">
             <div class="brand-text left">
-            © 2021 Copyright Text
-            {% load static %}</div>
-            <div class="brand-image right"> <a href="https://github.com/w4xccino/4thRepo" target="_blank">
-            <img class="fullwidth" src="{%static 'WebPayments/img/github.png'%}"></a>
-        
-        </img></div></div>
+                © 2021 Copyright Text
+                {% load static %}</div>
+                <div class="brand-image right"> <a href="https://github.com/w4xccino/4thRepo" target="_blank">
+                <img class="fullwidth" src="{%static 'WebPayments/img/github.png'%}"></a></img>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
+{%load static%}
 <script src="{%static 'WebPayments/js/materialize.js'%}"></script> 
 </body>
 </html>
