@@ -1,8 +1,9 @@
 from django.shortcuts import render
 def base(request):
     return render(request, 'WebPayments/base.html')
-<<<<<<< HEAD
-=======
+
 def index(request):
     return render(request, 'WebPayments/index.html')
->>>>>>> main
+
+def perfil(request):
+    return render(request, 'WebPayments/perfil.html')
