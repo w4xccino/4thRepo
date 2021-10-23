@@ -4,6 +4,5 @@ def base(request):
 
 def index(request):
     return render(request, 'WebPayments/index.html')
-
-def perfil(request):
-    return render(request, 'WebPayments/perfil.html')
+def proveedores(request):
+    return render(request, 'WebPayments/proveedores.html')
