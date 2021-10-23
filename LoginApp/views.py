@@ -16,5 +16,5 @@ def register(request):
      else:
           form = Registro()
      context = {'form' : form}
-     return render(request, 'LoginApp/register.html',context) 
+     return render(request, 'LoginApp/register.html', context) 
 
