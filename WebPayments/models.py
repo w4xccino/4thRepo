@@ -25,7 +25,7 @@ class Recordatorio(models.Model):
     tiempo = models.DurationField(verbose_name='Tiempo')
 class Proveedor(models.Model):
     nombre = models.CharField(max_length=40, unique=True, verbose_name='Nombre')
-    moneda = models.ForeignKey(Moneda, verbose_name='Moneda', on_delete=models.CASCADE)
+    moneda = models.ForeignKey(Moneda, verbose_name='moneda', on_delete=models.CASCADE)
     ciclo = models.ForeignKey(Ciclo, on_delete=models.CASCADE)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     recordatorio = models.ForeignKey(Recordatorio, on_delete=models.CASCADE)

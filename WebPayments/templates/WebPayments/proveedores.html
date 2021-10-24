@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +10,16 @@
     <link rel="shortcut icon" type="image/x-icon" href="{%static 'WebPayments/img/image.png'%}">
     <link rel="stylesheet" href="{%static 'WebPayments/css/materialize.css'%}">
 <body>
+  <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <button type="submit" >gaaa</button>
+  </form>
 
 {%load static%}
 <script src="{%static 'WebPayments/js/materialize.js'%}"></script> 
 
 </body>
 </html>
+
