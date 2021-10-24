@@ -14,3 +14,4 @@ Cada uno debe sacar un branch aparte con su nombre o con lo que quiera.
  - 🍉 DJango 2.2.19
  
  **El proyecto se ejecuta usando el comando `python3 manage.py runserver`**
+ ![image](https://i.imgur.com/EhMWqPU.png)
