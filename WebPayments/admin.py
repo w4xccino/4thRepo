@@ -7,6 +7,7 @@ class MonedaAdmin(admin.ModelAdmin):
     filter_horizontal = ()
     list_filter = ()
     fieldsets = ()
+    search_fields = ('detalles',)
     
 admin.site.register(Proveedor)
 admin.site.register(Recordatorio)

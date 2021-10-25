@@ -10,13 +10,13 @@
 
 </head>
 <body>
-<h1 class="center">Registerr</h1>
+<h1 class="center">Register</h1>
 <div class="container row">
     <div class="container">
         <form method="POST" class="" >
             {% csrf_token %}
             {{ form.as_p }}
-        <button class="waves-effect waves-light btn-small" type="submit">Register</button>
+            <button class="waves-effect waves-light btn-small" type="submit">Register</button>
         </form>
     </div>
 </div>

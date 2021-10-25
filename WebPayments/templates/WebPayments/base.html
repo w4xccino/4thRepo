@@ -14,13 +14,13 @@
 <nav class="nav-wrapper teal darken-4">
 <div class="container">
     <div class="left-nav">
-        <a href="" class="brand-logo">PeepoPay</a>
+        <a href="{%url 'index'%}" class="brand-logo">PeepoPay</a>
     </div>
     <div class="right">
         <ul>
-            <li><a class="btn-floating btn-large waves-effect waves-black teal darken-4">
+            <li><a class="btn-floating btn-large waves-effect waves-black teal darken-4" href="{% url 'index' %}">
             <i class="material-icons left">home</i>home</a></li>
-            <li><a class="btn-floating btn-large waves-effect waves-black teal darken-4">
+            <li><a href ="{%url 'proveedores'%}"class="btn-floating btn-large waves-effect waves-black teal darken-4">
             <i class="material-icons left">supervised_user_circle</i>Proveedores</a></li>
             <li><a class="btn-floating btn-large waves-effect waves-black teal darken-4">
             <i class="material-icons left">subscriptions</i>Subscripciones</a></li>
