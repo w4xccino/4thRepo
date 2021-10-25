@@ -10,8 +10,7 @@ class Moneda(models.Model):
         return self.simbolo
 
 class Ciclo(models.Model):
-    duracion = models.DurationField(verbose_name='Duracion')
-
+    duracion = models.CharField(max_length=12,verbose_name='Duracion')
     def __str__(self):
         return self.duracion
 
@@ -22,7 +21,9 @@ class Categoria(models.Model):
         return self.descripcion
 
 class Recordatorio(models.Model):
-    tiempo = models.DurationField(verbose_name='Tiempo')
+    tiempo = models.CharField(max_length=12, verbose_name='Tiempo')
+    def __str__(self):
+        return self.tiempo
 class Proveedor(models.Model):
     nombre = models.CharField(max_length=40, unique=True, verbose_name='Nombre')
     moneda = models.ForeignKey(Moneda, verbose_name='moneda', on_delete=models.CASCADE)

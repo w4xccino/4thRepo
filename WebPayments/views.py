@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import Proveedor
+from django.contrib import messages
 
 
 def base(request):
@@ -9,10 +10,13 @@ def index(request):
     return render(request, 'WebPayments/index.html')
 
 def proveedores(request):
-    form = Proveedor(request.POST)
-    if request == 'POST':
+    if request.method == 'POST':
+        form = Proveedor(request.POST)
         if form.is_valid():
-            moneda = form.cleaned_data('moneda')
+            form.save()
+            nombre = form.cleaned_data['nombre']
+            messages.success(request, f"Proveedor {nombre} ha sido creado")
+
     else:
         form = Proveedor()
     context = {'form':form}

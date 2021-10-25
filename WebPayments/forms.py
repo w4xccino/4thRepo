@@ -9,7 +9,16 @@ class Proveedor(forms.ModelForm):
         fields = [
             'nombre',
             'moneda',
+            'ciclo',
+            'categoria',
+            'recordatorio',
+            'telefono',
         ]
         widgets = {
             'nombre': forms.TextInput(attrs={'placeholder':'Ingrese su nombre'}),
+            'moneda': forms.Select(attrs={'class':'browser-default'}),
+            'ciclo': forms.Select(attrs={'class':'browser-default'}),
+            'categoria': forms.Select(attrs={'class':'browser-default'}),
+            'recordatorio': forms.Select(attrs={'class':'browser-default'}),
+            'telefono': forms.TextInput(attrs={'placeholder':'Ingrese su telefono'}),
         }

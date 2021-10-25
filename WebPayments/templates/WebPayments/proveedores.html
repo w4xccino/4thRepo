@@ -1,5 +1,5 @@
-
-
+{% extends 'WebPayments/base.html' %}
+{% block contenido %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +9,25 @@
     {%load static%}
     <link rel="shortcut icon" type="image/x-icon" href="{%static 'WebPayments/img/image.png'%}">
     <link rel="stylesheet" href="{%static 'WebPayments/css/materialize.css'%}">
+    <title>Agregar Proveedor</title>
 <body>
+<div class="container">
   <form method="post">
     {% csrf_token %}
     {{form.as_p}}
-
-    <button type="submit" >gaaa</button>
+    <button class="waves-effect waves-light btn-small" type="submit" >Agregar Proveedor</button>
+    <p></p>
   </form>
+</div>
+  {%if messages%}
+    {% for message in messages %}
+      <div class="notification {{message.tags}}">
+          {{message}}
+      </div>
+    {% endfor %}
+  {%endif%}
 
-{%load static%}
 <script src="{%static 'WebPayments/js/materialize.js'%}"></script> 
-
 </body>
 </html>
-
+{% endblock %}
