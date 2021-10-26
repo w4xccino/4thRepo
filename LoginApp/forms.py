@@ -1,19 +1,16 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.forms import widgets
 from .models import Usuario
 
 class Registro(UserCreationForm):
-    username = forms.CharField(label='Nombre de usuario')
-    email = forms.EmailField(label='E-mail')
-    first_name = forms.CharField(label='Nombres')
-    last_name = forms.CharField(label='Apellidos')
-    direccion = forms.CharField(label='Direccion')
-    phone = forms.CharField(label='Telefono')
-    c_postal = forms.CharField(label='Codigo Postal')
-    password1 = forms.CharField(label='Contrasena',widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Confirma Contrasena',widget=forms.PasswordInput)
+    def __init__(self, *args, **kwargs):
+        super(UserCreationForm, self).__init__(*args, **kwargs)
 
+        for fieldname in ['username', 'password1', 'password2']:
+            self.fields[fieldname].help_text = None
+    
     class Meta:
         model = Usuario
         fields = ['username',
@@ -25,5 +22,15 @@ class Registro(UserCreationForm):
                   'phone',
                   'direccion',
                   'c_postal',]
-
-        help_text = {k:"" for k in fields}
+        help_texts = {None}
+        widgets = {
+            'username' : forms.TextInput(attrs={'placeholder': 'Ingrese su nombre p'}),
+            'email' : forms.EmailInput(),
+            'first_name' : forms.TextInput(),
+            'last_name' : forms.TextInput(),
+            'password1' : forms.PasswordInput(),
+            'password2' : forms.PasswordInput(),
+            'phone' : forms.TextInput(),
+            'direccion' : forms.TextInput(),
+            'c_postal' : forms.TextInput(),
+        }
