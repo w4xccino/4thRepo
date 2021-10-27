@@ -9,6 +9,9 @@ def base(request):
 def index(request):
     return render(request, 'WebPayments/index.html')
 
+def listarproveedores(request):
+    return render(request, 'WebPayments/listarproveedores.html')
+
 def proveedores(request):
     if request.method == 'POST':
         form = Proveedor(request.POST)
