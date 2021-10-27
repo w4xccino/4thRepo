@@ -18,15 +18,15 @@
     </div>
     <div class="right">
         <ul>
-            <li><a class="btn-floating btn-large waves-effect waves-black teal darken-4" href="{% url 'index' %}">
+            <li><a  href="{% url 'index' %}" class="btn-floating btn-large tooltipped waves-effect waves-black teal darken-4" data-position="botton" data-tooltip="Home">
             <i class="material-icons left">home</i>home</a></li>
-            <li><a href ="{%url 'proveedores'%}"class="btn-floating btn-large waves-effect waves-black teal darken-4">
+            <li><a href ="{%url 'proveedores'%}"class="btn-floating btn-large tooltipped waves-effect waves-black teal darken-4" data-position="botton" data-tooltip="Proveedores">
             <i class="material-icons left">supervised_user_circle</i>Proveedores</a></li>
-            <li><a class="btn-floating btn-large waves-effect waves-black teal darken-4">
+            <li><a class="btn-floating btn-large tooltipped waves-effect waves-black teal darken-4" data-position="botton" data-tooltip="Subscripciones">
             <i class="material-icons left">subscriptions</i>Subscripciones</a></li>
-            <li><a class="btn-floating btn-large waves-effect waves-light teal darken-4">
+            <li><a class="btn-floating btn-large tooltipped waves-effect waves-light teal darken-4" data-position="botton" data-tooltip="Perfil">
             <i class="material-icons right">account_circle</i></a></li>
-            <li><a class="btn-floating btn-large waves-effect waves-black teal darken-4" href="{%url 'logout' %}">
+            <li><a href="{%url 'logout' %}" class="btn-floating btn-large tooltipped waves-effect waves-black teal darken-4" data-position="botton" data-tooltip="Cerrar Sesión">
             <i class="material-icons right">logout</i>Cerrar Sesion</a></li>
         </ul>
     </div>
@@ -37,20 +37,20 @@
 
 {%endblock%}
 </div>
-<footer class="page-footer">
+<footer class="page-footer teal darken-3">
     <div class="container">
         <div class="row">
             <div class="col s12 m8 l6">
-                <h5 class="cian-text">Creadores</h5>
-                <p class="black-text">The Four Minds</p>
+                <h5 class="cyan-text">Creadores:</h5>
+                <h5 class="cyan-text center">╚ The Four Minds ╝</h5>
             </div>
             <div class="col s12 m4 l6">
-                <h5 class="cian-text">Thanks for visiting our website.</h5>
-                <p class="black-text"></p>
+                <h5 class="teal-text text-accent-4">Gracias por visitar nuestra página web.</h5>
+                <p class="cyan-text">╚🍁╩🍁╩🍁╩🍁╩🍁╩🍁╩🍁╩🍁╩🍁╩🍁╩🍁╩🍁╩🍁╝</p>
             </div>
         </div>
     </div>
-    <div class="footer-copyright">
+    <div class="footer-copyright teal darken-4">
         <div class="container">
             <div class="brand-text left">
                 © 2021 Copyright Text
@@ -64,5 +64,13 @@
 </footer>
 {%load static%}
 <script src="{%static 'WebPayments/js/materialize.js'%}"></script> 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var tool = document.querySelectorAll('.tooltipped');
+    M.Tooltip.init(tool, {
+        inDuration:444
+    })
+    });
+</script>
 </body>
 </html>
