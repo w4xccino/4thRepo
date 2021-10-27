@@ -22,9 +22,9 @@
             <i class="material-icons left">home</i>home</a></li>
             <li><a href ="{%url 'proveedores'%}"class="btn-floating btn-large tooltipped waves-effect waves-black teal darken-4" data-position="botton" data-tooltip="Proveedores">
             <i class="material-icons left">supervised_user_circle</i>Proveedores</a></li>
-            <li><a class="btn-floating btn-large tooltipped waves-effect waves-black teal darken-4" data-position="botton" data-tooltip="Subscripciones">
+            <li><a class="btn-floating btn-large tooltipped waves-effect waves-black teal darken-4" data-position="botton" data-tooltip="Subscripciones" href="{% url 'listarproveedores' %}">
             <i class="material-icons left">subscriptions</i>Subscripciones</a></li>
-            <li><a class="btn-floating btn-large tooltipped waves-effect waves-light teal darken-4" data-position="botton" data-tooltip="Perfil">
+            <li><a class="btn-floating btn-large tooltipped waves-effect waves-light teal darken-4" data-position="botton" data-tooltip="Perfil" >
             <i class="material-icons right">account_circle</i></a></li>
             <li><a href="{%url 'logout' %}" class="btn-floating btn-large tooltipped waves-effect waves-black teal darken-4" data-position="botton" data-tooltip="Cerrar Sesión">
             <i class="material-icons right">logout</i>Cerrar Sesion</a></li>
@@ -34,7 +34,7 @@
 </nav>
 <div class="contenido">
 
-      <a class="navbar-brand" href="{% url 'listarproveedores' %}">Listado</a>
+    
 
       
 {%block contenido%}
