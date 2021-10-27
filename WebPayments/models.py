@@ -31,6 +31,7 @@ class Proveedor(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     recordatorio = models.ForeignKey(Recordatorio, on_delete=models.CASCADE)
     telefono = models.CharField(max_length=8, unique=True, verbose_name='Telefono')
+    monto = models.FloatField(verbose_name='Monto')
 
     def __str__(self):
         return self.nombre
