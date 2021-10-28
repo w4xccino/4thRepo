@@ -11,13 +11,18 @@
     <link rel="stylesheet" href="{%static 'WebPayments/css/materialize.css'%}">
     <title>Agregar Proveedor</title>
 <body>
+  <p></p>
+<h2 class="container center">Agregar Proveedor</h2>
 <div class="container">
   <form method="post">
     {% csrf_token %}
     {{form.as_p}}
     <button class="waves-effect waves-light btn-small" type="submit" >Agregar Proveedor</button>
-    <p></p>
+    <a href="{% url 'listarproveedores' %}" class="waves-effect waves-light btn-small" >Listar Proveedores</a>
+ <p></p>
+ <p></p>
   </form>
+
 </div>
   {%if messages%}
     {% for message in messages %}
