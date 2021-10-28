@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import Proveedor
 from django.contrib import messages
+from .models import Proveedor as Prov
 
 
 def base(request):
@@ -10,7 +11,9 @@ def index(request):
     return render(request, 'WebPayments/index.html')
 
 def listarproveedores(request):
-    return render(request, 'WebPayments/listarproveedores.html')
+    table = Prov.objects.all()
+    context = {'table':table}
+    return render(request, 'WebPayments/listarproveedores.html', context)
 
 def proveedores(request):
     if request.method == 'POST':

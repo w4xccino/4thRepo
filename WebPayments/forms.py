@@ -13,6 +13,7 @@ class Proveedor(forms.ModelForm):
             'categoria',
             'recordatorio',
             'telefono',
+            'monto'
         ]
         widgets = {
             'nombre': forms.TextInput(attrs={'placeholder':'Ingrese su nombre'}),
@@ -21,4 +22,5 @@ class Proveedor(forms.ModelForm):
             'categoria': forms.Select(attrs={'class':'browser-default'}),
             'recordatorio': forms.Select(attrs={'class':'browser-default'}),
             'telefono': forms.TextInput(attrs={'placeholder':'Ingrese su telefono'}),
+            'monto': forms.TextInput(attrs={'placeholder':'Ingrese su monto de pago'}),
         }
