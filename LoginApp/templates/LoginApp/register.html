@@ -16,7 +16,7 @@
         <form method="POST" class="" >
             {% csrf_token %}
             {{ form.as_p }}
-            <button class="waves-effect waves-light btn-small" type="submit">Register</button>
+            <button class="waves-effect waves-light btn" type="submit">Register</button>
         </form>
     </div>
 </div>
@@ -27,8 +27,8 @@
             </div>
         {% endfor %}
     {%endif%}
-    <script src="{% static 'LoginApp/js/materialize.js' %}"></script>
 
-
+{% load static %}
+<script src="{% static 'LoginApp/js/materialize.js' %}"></script>
 </body>  
 </html>
