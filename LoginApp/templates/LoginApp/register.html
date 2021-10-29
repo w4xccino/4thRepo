@@ -7,11 +7,15 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'LoginApp/css/materialize.css' %}">
     <title>Login</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
 <h1 class="center">Register</h1>
+
 <div class="container row">
+<a  class="waves-effect waves-light btn-small"  href="{%url 'login'%}">
+<i class="material-icons left">arrow_back</i>Volver</a>
     <div class="container">
         <form method="POST" class="" >
             {% csrf_token %}
