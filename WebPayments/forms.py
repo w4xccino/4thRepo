@@ -4,6 +4,13 @@ from .models import Proveedor
 
 
 class Proveedor(forms.ModelForm):
+    duracion = forms.DateField(
+        input_formats=['%d/%m/%Y'],
+        widget=forms.DateInput(attrs={
+            'class': 'datepicker',
+            'data-target': '.datepicker'
+        })
+    )
     class Meta:
         model = Proveedor
         fields = [
@@ -12,8 +19,9 @@ class Proveedor(forms.ModelForm):
             'ciclo',
             'categoria',
             'recordatorio',
+            'duracion',
             'telefono',
-            'monto'
+            'monto',
         ]
         widgets = {
             'nombre': forms.TextInput(attrs={'placeholder':'Ingrese su nombre'}),
