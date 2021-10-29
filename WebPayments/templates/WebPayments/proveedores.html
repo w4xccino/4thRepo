@@ -31,8 +31,15 @@
       </div>
     {% endfor %}
   {%endif%}
-
-<script src="{%static 'WebPayments/js/materialize.js'%}"></script> 
+<script language="JavaScript" type="text/javascript" src="{%static 'WebPayments/js/materialize.js'%}"></script> 
+<script language="JavaScript" type="text/javascript" src="{% static 'WebPayments/js/jquery.js' %}" ></script>
+<script>
+  $(document).ready(function(){
+    $('.datepicker').datepicker({
+      format: 'dd/mm/yyyy'
+    });
+  });
+</script>
 </body>
 </html>
 {% endblock %}

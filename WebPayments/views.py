@@ -22,7 +22,6 @@ def proveedores(request):
             form.save()
             nombre = form.cleaned_data['nombre']
             messages.success(request, f"Proveedor {nombre} ha sido creado")
-
     else:
         form = Proveedor()
     context = {'form':form}
