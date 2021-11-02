@@ -9,11 +9,22 @@
     {%load static%}
     <link rel="shortcut icon" type="image/x-icon" href="{%static 'WebPayments/img/image.png'%}">
     <link rel="stylesheet" href="{%static 'WebPayments/css/materialize.css'%}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <title>Listar Suscripciones</title>
+    
 <body>
     <p></p>
 <h1 class="container center"> Suscripciones </h1>
 <p></p>
+
+<script>
+    M.toast({
+        html: 'Suscripciones listadas',
+        displayLength: 3000,
+        classes: "blue"
+    })
+
+</script>
 
 <table class="table container highlight">
         <tr>

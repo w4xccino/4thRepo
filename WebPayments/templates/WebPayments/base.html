@@ -9,6 +9,24 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{%static 'WebPayments/css/materialize.css'%}">
 
+
+<!-- alerta de cerrar sesion -->
+<script type="text/javascript">
+    function Confirmlogout()
+    {
+        var respuesta = confirm("¿Estas seguro de cerrar sesion?");
+
+        if (respuesta == true)
+         {
+            return true;
+         }
+         else
+         {
+            return false;
+         }
+    }
+</script>
+
 <body>
 
 <nav class="nav-wrapper teal darken-4">
@@ -26,7 +44,7 @@
             <i class="material-icons left">subscriptions</i>Subscripciones</a></li>
             <li><a class="btn-floating btn-large tooltipped waves-effect waves-light teal darken-4" data-position="botton" data-tooltip="Perfil" >
             <i class="material-icons right">account_circle</i></a></li>
-            <li><a href="{%url 'logout' %}" class="btn-floating btn-large tooltipped waves-effect waves-black teal darken-4" data-position="botton" data-tooltip="Cerrar Sesión">
+            <li><a href="{%url 'login' %}" class="btn-floating btn-large tooltipped waves-effect waves-black teal darken-4" data-position="botton" data-tooltip="Cerrar Sesión" onclick="return Confirmlogout()">
             <i class="material-icons right">logout</i>Cerrar Sesion</a></li>
         </ul>
     </div>
