@@ -31,13 +31,17 @@
                 <div class="card cyan">
                     <div class="card-image">
                         {%load static %}
-                        <img class="img-responsive materialboxed" width="250" src="{%static 'WebPayments/img/cards.jpg'%}">
-                        <span class="card-title">Proveedores</span>
+                        <img class="img-responsive materialboxed" width="250" src="{%static 'WebPayments/img/cards1.jpg'%}">
+                        <span class="card-title"><b>Proveedores</b></span>
                         <a href ="{%url 'proveedores'%}" class="btn-floating halfway-fab waves-effect waves-light red btn-large"><i class="material-icons">supervised_user_circle</i></a>
                     </div>
                     <div class="card-content white-text">
                         <p>
-                            Bienvenidos a esta zona donde usted puede escoger su proveedor, :3 Siu! 🍁
+                            ╚ La selección de proveedor es un decisión marcada
+                            por la complejidad que trae la necesidad de evaluar
+                            a los diferentes proveedores en función de criterios tanto
+                            de carácter cuantitativo como cualitativo y que, a menudo,
+                            pueden entrar en conflicto unos a otros. 🍁
                         </p>
                     </div>
                 </div>
@@ -46,8 +50,8 @@
                 <div class="card cyan">
                     <div class="card-image">
                         {%load static %}
-                        <img src="{%static 'WebPayments/img/mount.jpg'%}" alt="">
-                        <span class="card-title">Features Of PeepoPay</span>
+                        <img src="{%static 'WebPayments/img/cards0.jpg'%}" alt="">
+                        <span class="card-title"><b>Features Of PeepoPay</b></span>
                     </div>
                     <div class="card-content white-text">
                         <p>
@@ -60,9 +64,9 @@
                 <div class="card cyan">
                     <div class="card-image">
                         {%load static %}
-                        <img src="{%static 'WebPayments/img/cards.jpg'%}" alt="">
-                        <span class="card-title text-center red-text">Subscripciones</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red btn-large"><i class="material-icons">subscriptions</i></a>
+                        <img src="{%static 'WebPayments/img/cards2.jpg'%}" alt="">
+                        <span class="card-title red-text"><b>Subscripciones</b></span>
+                        <a href ="{%url 'listarproveedores'%}" class="btn-floating halfway-fab waves-effect waves-light red btn-large"><i class="material-icons">subscriptions</i></a>
                     </div>
                     <div class="card-content white-text">
                         <p>
@@ -74,10 +78,9 @@
         </div>
     </div>
 </div>
-</div>
 <div class="parallax-container">
     {%load static %}
-    <div class="parallax"><img src="{%static 'WebPayments/img/fondo2.jpg'%}"></div>
+    <div class="parallax"><img src="{%static 'WebPayments/img/fondo.jpg'%}"></div>
 </div>
 {%load static %}
 <script src="{%static 'WebPayments/js/materialize.js'%}"></script> 
