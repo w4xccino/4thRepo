@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.base import Model
 from django.db.models.fields import DurationField
+from datetime import datetime
 
 class Moneda(models.Model):
     detalles = models.CharField(max_length = 20, unique=True, verbose_name='Detalles')
@@ -28,9 +29,10 @@ class Proveedor(models.Model):
     nombre = models.CharField(max_length=40, unique=True, verbose_name='Nombre')
     moneda = models.ForeignKey(Moneda, verbose_name='moneda', on_delete=models.CASCADE)
     ciclo = models.ForeignKey(Ciclo, on_delete=models.CASCADE)
+    duracion = models.DateField(verbose_name='Duracion', auto_now=False, auto_now_add=False)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     recordatorio = models.ForeignKey(Recordatorio, on_delete=models.CASCADE)
-    telefono = models.CharField(max_length=8, unique=True, verbose_name='Telefono')
+    telefono = models.CharField(max_length=9, unique=True, verbose_name='Telefono')
     monto = models.FloatField(verbose_name='Monto')
 
     def __str__(self):

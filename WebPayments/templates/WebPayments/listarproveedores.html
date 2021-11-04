@@ -3,66 +3,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {%load static%}
     <link rel="shortcut icon" type="image/x-icon" href="{%static 'WebPayments/img/image.png'%}">
     <link rel="stylesheet" href="{%static 'WebPayments/css/materialize.css'%}">
+    <title>Listar Suscripciones</title>
 <body>
+    <p></p>
 <h1 class="container center"> Suscripciones </h1>
+<p></p>
 
-<table class="table table-responsive table-bordered container">
-    <thead>
+<table class="table container highlight">
         <tr>
-            <th>id</th>
             <th>Nombre</th>
-            <th>telefono</th>
-            <th>Categoria</th>
             <th>Ciclo</th>
-            <th>Moneda</th>
+            <th>Duracion</th>
+            <th>Categoria</th>
             <th>Recordatorio</th>
+            <th>Telefono</th>
             <th>Monto</th>
         </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Romario</td>
-            <td>9001515546</td>
-            <td>Lechero</td>
-            <td>Mensual</td>
-            <td>Inti</td>
-            <td>2 meses</td>
-            <td>S/:300</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Sofia</td>
-            <td>900215546</td>
-            <td>Lechera</td>
-            <td>Mensual</td>
-            <td>Inti</td>
-            <td>2 meses</td>
-            <td>S/:500</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Diego</td>
-            <td>9003215546</td>
-            <td>Lechero</td>
-            <td>Mensual</td>
-            <td>Dolar</td>
-            <td>2 meses</td>
-            <td>S/:200</td>
-        </tr>
-    </tbody>
+        {% for row in table %}
+            <tr>
+                
+                <td>{{row.nombre}}</td>
+                <td>{{row.ciclo}}</td>
+                <td>{{row.duracion}}</td>
+                <td>{{row.categoria}}</td>
+                <td>{{row.recordatorio}}</td>
+                <td>{{row.telefono}}</td>
+                <td>{{row.monto}} {{row.moneda}}</td>
+            </tr>
+        {%endfor%}
 </table>
+<p></p>
+<div class="container center">
+
+    <a href="{% url 'proveedores' %}" class="center waves-effect waves-light btn-small" >
+    Agregar Proveedor</a>
+    <p></p>
+</div>
 
 {%load static%}
 <script src="{%static 'WebPayments/js/materialize.js'%}"></script> 

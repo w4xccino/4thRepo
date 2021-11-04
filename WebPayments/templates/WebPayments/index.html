@@ -1,21 +1,21 @@
 {%extends 'WebPayments/base.html'%}
 {%block contenido%}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {%load static %}
     <link rel="stylesheet" href="{%static 'WebPayments/css/materialize.css'%}">
-    <title>Main</title>
+    <title>PeepoPay</title>
 </head>
 <body>
 <div class="grey darken-4 white-text center">
     <div class="container">
         <div class="section">
             <h4>
-                BIENVENIDO {{user.get_username}}
+                Bienvenido, <b> {{user.get_username}} </b>
             </h4>
         </div>
     </div>
