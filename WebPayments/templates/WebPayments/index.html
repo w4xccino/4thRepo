@@ -1,5 +1,5 @@
-{%extends 'WebPayments/base.html'%}
-{%block contenido%}
+{% extends 'WebPayments/base.html' %}
+{% block contenido %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,6 +20,7 @@
         </div>
     </div>
 </div>
+
 <div class="parallax-container">
     {%load static %}
     <div class="parallax"><img src="{%static 'WebPayments/img/PeepoPay.jpg'%}"></div>
@@ -91,10 +92,10 @@
     });
     document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.materialboxed');
-    var instances = M.Materialbox.init(elems, options);
+    var instances = M.Materialbox.init(elems);
     });
 </script>
 
 </body>
 </html>
-{%endblock%}
+{% endblock contenido %}
