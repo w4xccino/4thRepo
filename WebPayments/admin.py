@@ -8,7 +8,7 @@ class MonedaAdmin(admin.ModelAdmin):
     fieldsets = ()
     search_fields = ('detalles',)
 class ProveedorAdmin(admin.ModelAdmin):
-    list_display = ('nombre','moneda','ciclo','duracion','categoria','recordatorio', 'telefono','monto')
+    list_display = ('nombre','moneda','ciclo','duracion','categoria','recordatorio', 'telefono','monto','alerta')
     filter_horizontal = ()
     list_filter = ()
     fieldsets = ()

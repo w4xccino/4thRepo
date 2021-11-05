@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models.base import Model
 from django.db.models.fields import DurationField
-from datetime import datetime
+import datetime
 
 class Moneda(models.Model):
     detalles = models.CharField(max_length = 20, unique=True, verbose_name='Detalles')
@@ -31,9 +31,24 @@ class Proveedor(models.Model):
     ciclo = models.ForeignKey(Ciclo, on_delete=models.CASCADE)
     duracion = models.DateField(verbose_name='Duracion', auto_now=False, auto_now_add=False)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+    alerta = models.DateField(verbose_name='Fecha Alerta', auto_now=False, auto_now_add=False, null=True)
     recordatorio = models.ForeignKey(Recordatorio, on_delete=models.CASCADE)
     telefono = models.CharField(max_length=9, unique=True, verbose_name='Telefono')
     monto = models.FloatField(verbose_name='Monto')
+
+    def save(self, *args, **kwargs):
+        if str(self.recordatorio) == "1 dia antes":
+            self.alerta = self.duracion - datetime.timedelta(days=1)
+            super(Proveedor, self).save(*args, **kwargs)
+
+        elif str(self.recordatorio) == "3 dias antes":
+            self.alerta = self.duracion - datetime.timedelta(days=3)
+            super(Proveedor, self).save(*args, **kwargs)
+
+        elif str(self.recordatorio) == "7 dias antes":
+            self.alerta = self.duracion - datetime.timedelta(days=7)
+            super(Proveedor, self).save(*args, **kwargs)
+
 
     def __str__(self):
         return self.nombre

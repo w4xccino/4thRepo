@@ -24,8 +24,10 @@
             <i class="material-icons left">supervised_user_circle</i>Proveedores</a></li>
             <li><a class="btn-floating btn-large tooltipped waves-effect waves-black teal darken-4" data-position="botton" data-tooltip="Subscripciones" href="{% url 'listarproveedores' %}">
             <i class="material-icons left">subscriptions</i>Subscripciones</a></li>
-            <li><a class="btn-floating btn-large tooltipped waves-effect waves-light teal darken-4" data-position="botton" data-tooltip="Perfil" >
-            <i class="material-icons right">account_circle</i></a></li>
+            <li><button onclick='{% for i in lista %}
+                show_alert("{{i}}")
+                {% endfor %}' class="btn-floating btn-large tooltipped waves-effect waves-light teal darken-4" data-position="botton" data-tooltip="Notificaciones" >
+            <i class="material-icons right">gpp_maybe</i></button></li>
             <li><a href="{%url 'logout' %}" class="btn-floating btn-large tooltipped waves-effect waves-black teal darken-4" data-position="botton" data-tooltip="Cerrar Sesión">
             <i class="material-icons right">logout</i>Cerrar Sesion</a></li>
         </ul>
@@ -33,9 +35,10 @@
 </div>
 </nav>
 <div class="contenido">
+
 {%block contenido%}
 
-{%endblock%}
+{%endblock contenido%}
 </div>
 <footer class="page-footer teal darken-3">
     <div class="container">
@@ -71,6 +74,14 @@
         inDuration:444
     })
     });
+</script>
+<script type="text/javascript">
+function show_alert(variable) {
+    message = "El plazo de pago del proveedor " + variable + " esta a punto de vencer"
+    M.toast({
+        html: message
+    })
+}
 </script>
 </body>
 </html>
