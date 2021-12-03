@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 django = "*"
+mysqlclient = "==2.0.3"
 
 [dev-packages]
 pylint = "*"
