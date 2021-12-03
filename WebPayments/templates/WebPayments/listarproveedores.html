@@ -15,7 +15,7 @@
 <h1 class="container center"> Suscripciones </h1>
 <p></p>
 
-<table class="table container highlight">
+<table id = 'tabla' class="table container highlight">
         <tr>
             <th>Nombre</th>
             <th>Ciclo</th>
@@ -27,7 +27,6 @@
         </tr>
         {% for row in table %}
             <tr>
-                
                 <td>{{row.nombre}}</td>
                 <td>{{row.ciclo}}</td>
                 <td>{{row.duracion}}</td>
@@ -38,17 +37,57 @@
             </tr>
         {%endfor%}
 </table>
+<table id = 'tabla2' style="display:none" class="table container highlight">
+        <tr>
+            <th>Nombre</th>
+            <th>Ciclo</th>
+            <th>Duracion</th>
+            <th>Categoria</th>
+            <th>Recordatorio</th>
+            <th>Telefono</th>
+            <th>Monto</th>
+        </tr>
+        {% for row in ordenar %}
+            <tr>
+                <td>{{row.0}}</td>
+                <td>{{row.1}}</td>
+                <td>{{row.2}}</td>
+                <td>{{row.3}}</td>
+                <td>{{row.4}}</td>
+                <td>{{row.5}}</td>
+                <td>{{row.6}} {{row.7}}</td>
+            </tr>
+        {%endfor%}
+</table>
 <p></p>
 <div class="container center">
 
     <a href="{% url 'proveedores' %}" class="center waves-effect waves-light btn-small" >
     Agregar Proveedor</a>
-    <p></p>
+    
+    <button onclick="show_sum('{{suma.0}}')" class="center waves-effect waves-light btn-small">
+    Sumar Monto Total</button>
+
+    <button onclick="change()" class="center waves-effect waves-light btn-small">
+    erase xdxdxd</button>
+
 </div>
 
 {%load static%}
 <script src="{%static 'WebPayments/js/materialize.js'%}"></script> 
+<script type="text/javascript">
+function show_sum(variable) {
+    message = "El monto total para pagar es " + variable;  
+    M.toast({
+        html: message
+    })
+};
+  function change(){
+      document.getElementById("tabla").style.display="none"
+      document.getElementById("tabla2").style.display=""
+    }
 
+</script>
 </body>
 </html>
 {%endblock%}
